@@ -1,0 +1,83 @@
+
+<style>
+div{
+    background: antiquewhite;
+}
+</style>
+<h1 align="Center">DOM</h1>
+<div>
+<p>This is my first description</p>
+<p>This is my second description</p>
+<p>This is my Third description</p>
+
+<input type="text" id="username" class="myclass" name="username" value="Siddhu" onkeyup="mykeydown(this.value);" /> username <br>
+<input type="text" id="myemail" class="myemail" name="email" value="" /> email<br>
+<input type="text" id="myphone" class="myphone" name="phone" value="" /> phone<br>
+<input type="text" id="mypwd" class="pwd" name="pwd" value="" /><br>
+<input type="checkbox" id="" class="fav" name="fac" value="Red" /> Red <br>
+<input type="checkbox" id="" class="fav" name="fac" value="green" /> Green <br>
+<input type="checkbox" id="" class="fav" name="fac" value="Orange" /> Orange <br>
+<input type="checkbox" id="" class="fav" name="fac" value="Yellow" /> Yellow <br>
+
+<input type="radio" id="gender" class="gender" name="gender" value="M" /> Male <br>
+<input type="radio" id="gender" class="gender" name="gender" value="F" /> Female <br>
+
+
+<textarea name="desc"></textarea><br>
+
+
+<select name="education" id="education">
+	<option value="B.tech">B.tech</option>
+	<option value="10th">10th</option>
+	<option value="Degree">Degree</option>
+	<option value="M.tech">M.tech</option>
+</select>
+
+<input type="button" name="button" value="submit" onclick="myfunc();">
+<input type="reset" name="button" value="reset">
+
+
+<p id="output"></p>
+
+</div>
+
+<script>
+
+
+
+	// example for getting value using ID
+	var username = document.getElementById("username").value;
+	console.log(username);
+	
+	/* 
+		onclick
+		onchange
+		onsubmit
+		onload
+		onkeydown
+		onkeypress		
+	*/
+	
+	
+	function myfunc()
+	{
+		var myemail = document.getElementById("myemail").value;
+		var myphone = document.getElementById("myphone").value;
+		var education = document.getElementById("education").value;
+		var gender = document.getElementById("gender").value;
+		document.getElementById("output").innerHTML = "<b>"+myemail+"</b></br>"+"<b>"+myphone+"</b></br>"+"<b>"+education+"</b></br>"+"<b>"+gender+"</b></br>";
+	}
+	
+	
+	function mykeydown(e)
+	{
+		var name = e;
+		
+		document.getElementById("username").value = name.toUpperCase();
+		
+	}
+
+</script>
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+#name{background-color:green;}
+</style>
+<form>
+<h1> form validation </h1>
+<div>
+	<input type="text" name="username" id="name" class="" >
+</div>
+
+<div>
+	<input type="password" name="pwd" id="pwd" class="">
+</div>
+
+
+
+
+<div>
+	<input type="button" name="button" id="button" class="" value="submit" onclick="myfunction();">
+</div>
+</form>
+
+<script>
+function myfunction()
+{
+	var username = document.getElementById('name').value;
+	var pwd = document.getElementById('pwd').value;
+	
+	alert(username);
+	alert(pwd);
+}
+
+
+</script>
+</html>
